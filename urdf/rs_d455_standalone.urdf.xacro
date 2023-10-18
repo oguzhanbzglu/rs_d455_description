@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<robot name="realsense_d455" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <xacro:include filename="$(find realsense_description)/urdf/rs_d455.urdf.xacro" />
+  <xacro:arg name="simulation" default="false" />
+
+  <!-- Dummy link  -->
+  <link name="base"/>
+
+  <xacro:realsense_d455 parent="base" simulation="$(arg simulation)">
+    <origin xyz="0 0 0" rpy="0 0 0" />
+  </xacro:realsense_d455>
+</robot>
